@@ -9,8 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var sleepAmount: Double = 8.0
+    @State var wakeUp = Date()
+    let now = Date()
+    let tomorrow = Date().addingTimeInterval(86400)
+    
     var body: some View {
-        Text("Hello, World!")
+        Form {
+            Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+                Text("\(sleepAmount, specifier: "%.2f") hours")
+            }
+            DatePicker("Please enter a date", selection: $wakeUp, in: now...)
+        }
     }
 }
 
