@@ -17,39 +17,53 @@ struct ContentView: View {
     @State private var showingAlert = false
     let now = Date()
     
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                Text("When do you want to wake up?")
+//                    .font(.headline)
+//                DatePicker("Please enter a date", selection: $wakeUp, displayedComponents: .hourAndMinute)
+//                .labelsHidden()
+//                Text("Desired amount of sleep")
+//                    .font(.headline)
+//                Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+//                    Text("\(sleepAmount, specifier: "%.2f") hours")
+//                }
+//                Text("Daily coffee intake")
+//                    .font(.headline)
+//                Stepper(value: $coffeeAmount, in: 1...20, step: 1) {
+//                    if coffeeAmount == 1 {
+//                        Text("1 cup")
+//                    } else {
+//                        Text("\(coffeeAmount) cups")
+//                    }
+//                }
+//            }
+//            .navigationBarTitle("Better Sleep")
+//            .navigationBarItems(trailing:
+//                Button(action: calculateBedTime) {
+//                    Text("Calculate")
+//                }
+//            )
+//                .alert(isPresented: $showingAlert) {
+//                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Okay")))
+//            }
+//        }
+//    }
+    
     var body: some View {
-        NavigationView {
+        VStack {
             VStack {
-                Text("When do you want to wake up?")
-                    .font(.headline)
-                DatePicker("Please enter a date", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                .labelsHidden()
-                Text("Desired amount of sleep")
-                    .font(.headline)
-                Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
-                    Text("\(sleepAmount, specifier: "%.2f") hours")
-                }
-                Text("Daily coffee intake")
-                    .font(.headline)
-                Stepper(value: $coffeeAmount, in: 1...20, step: 1) {
-                    if coffeeAmount == 1 {
-                        Text("1 cup")
-                    } else {
-                        Text("\(coffeeAmount) cups")
-                    }
-                }
+               Image("Sun")
+                Text("18:59")
             }
-            .navigationBarTitle("Better Sleep")
-            .navigationBarItems(trailing:
-                Button(action: calculateBedTime) {
-                    Text("Calculate")
-                }
-            )
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Okay")))
+            .background(Image("Stars"))
+            VStack {
+               Text("")
             }
         }
     }
+    
     func calculateBedTime() {
         let model = SleepCalculator()
         let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
