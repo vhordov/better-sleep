@@ -53,14 +53,29 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            VStack {
-               Image("Sun")
-                Text("18:59")
-            }
+                VStack {
+                    Image("Sun")
+                    Text("18:56")
+                        .font(.custom("chalkboard", size: 70))
+                        .foregroundColor(Color.orange)
+                }
             .background(Image("Stars"))
+            .frame(width: 414, height: 681)
+            .edgesIgnoringSafeArea(.all)
             VStack {
-               Text("")
+               Text("When do you want to wake up?")
+                .frame(width: 414, height: 29)
+                .font(.custom("sf-compact", size: 24))
+                .background(Color.white)
+                .foregroundColor(Color.orange)
             }
+            DatePicker("Please enter a date", selection: $wakeUp, displayedComponents: .hourAndMinute)
+            .labelsHidden()
+            Text("Desired amount of sleep")
+            .frame(width: 414, height: 29)
+            .font(.custom("sf-compact", size: 24))
+            .background(Color.white)
+            .foregroundColor(Color.orange)
         }
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46539B2224EC90050049484D /* chalkboard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46539B2124EC90050049484D /* chalkboard.ttf */; };
+		46539B2424ECA5280049484D /* sf-compact.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46539B2324ECA5280049484D /* sf-compact.otf */; };
 		46F7AAE924D245E9004B670E /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 46F7AAE824D245E9004B670E /* SleepCalculator.mlmodel */; };
 		E17CA48524C90AF200DD3BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA48424C90AF200DD3BF0 /* AppDelegate.swift */; };
 		E17CA48724C90AF200DD3BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17CA48624C90AF200DD3BF0 /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46539B2124EC90050049484D /* chalkboard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chalkboard.ttf; sourceTree = "<group>"; };
+		46539B2324ECA5280049484D /* sf-compact.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-compact.otf"; sourceTree = "<group>"; };
 		46F7AAE824D245E9004B670E /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SleepCalculator.mlmodel; path = ../../../SleepCalculator.mlmodel; sourceTree = "<group>"; };
 		E17CA48124C90AF200DD3BF0 /* Better Sleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Sleep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17CA48424C90AF200DD3BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46539B2024EC8FB50049484D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46539B2324ECA5280049484D /* sf-compact.otf */,
+				46539B2124EC90050049484D /* chalkboard.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E17CA47824C90AF200DD3BF0 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				E17CA48424C90AF200DD3BF0 /* AppDelegate.swift */,
+				46539B2024EC8FB50049484D /* Fonts */,
 				E17CA48624C90AF200DD3BF0 /* SceneDelegate.swift */,
 				E17CA48824C90AF200DD3BF0 /* ContentView.swift */,
 				E17CA48A24C90AF500DD3BF0 /* Assets.xcassets */,
@@ -137,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17CA49124C90AF500DD3BF0 /* LaunchScreen.storyboard in Resources */,
+				46539B2224EC90050049484D /* chalkboard.ttf in Resources */,
+				46539B2424ECA5280049484D /* sf-compact.otf in Resources */,
 				E17CA48E24C90AF500DD3BF0 /* Preview Assets.xcassets in Resources */,
 				E17CA48B24C90AF500DD3BF0 /* Assets.xcassets in Resources */,
 			);
